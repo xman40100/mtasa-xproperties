@@ -65,14 +65,6 @@ function loadProperties(handler)
     outputServerLog("Done.")
 end
 
-addCommandHandler("debugpos", function (player)
-    local x, y, z = getElementPosition(player)
-    local int = getElementInterior(player)
-    local rx, ry, rz = getElementRotation(player)
-    outputChatBox(string.format("X: %0.2f, Y: %0.2f, Z: %0.2f", x, y, z))
-    outputChatBox(string.format("X: %0.2f, Y: %0.2f, Z: %0.2f, R: %0.2f", x, y, z, rz))
-end)
-
 addEventHandler("onResourceStart", resourceRoot, function ()
     connection = dbConnect("sqlite", "properties.db")
     checkDBSchema()
