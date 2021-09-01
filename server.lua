@@ -69,7 +69,9 @@ end
 
 addEventHandler("onResourceStart", resourceRoot, function ()
     connection = dbConnect("sqlite", "properties.db")
-    checkDBSchema()
+    if (connection) then
+        checkDBSchema()
+    end
 end)
 
 addEvent("serverCreatedProperty")
