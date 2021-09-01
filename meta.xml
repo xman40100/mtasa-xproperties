@@ -1,0 +1,8 @@
+<meta>
+    <info author="xman40100" version="1.0.0" name="properties" description="Create in-game properties that can be accessed like in single player." type="resource" />
+
+    <script src="server.lua" type="server" />
+    <script src="client.lua" type="client" />
+
+    <oop>false</oop>
+</meta>
