@@ -46,7 +46,9 @@ function loadProperties(handler)
             warpPlayerInterior(hitElement, row["INTERIOR"], row["INT_X"], row["INT_Y"], row["INT_Z"], row["INT_A"])
         end)
 
-        createBlipAttachedTo(markerEnter, row["ICON"], 1, 255, 255, 255, 255, 0, 350.0)
+        if (row["ICON"] ~= nil) then
+            createBlipAttachedTo(markerEnter, row["ICON"], 1, 255, 255, 255, 255, 0, 350.0)
+        end
 
         local markerExit = createMarker(row["EXIT_X"], row["EXIT_Y"], row["EXIT_Z"] + 0.5, "arrow", 1.0, 255, 255, 55)
         setElementInterior(markerExit, row["INTERIOR"])
